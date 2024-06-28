@@ -40,8 +40,11 @@ Merchants based in Locations London and Luton receive 15% discount 1st month.
 
 Merchants with average transaction amount greater than 50 get 1% discount for 12 months.
 
+Existing NatWest customers get 50% discount for the first month.
+
 
 I am a <SIZE> <CATEGORY> owner operating in <LOCATIONS> with annual turnover of <TURN_OVER> and average transaction amount is <AVERAGE> taking payments <HOW> payments.
 <PLAN>
+<NATWEST>
 
 Recommend me suitable product list, applicable promotions and historical average transaction amount in JSON format with suitable_products, discounts, locations, historical_transaction_value

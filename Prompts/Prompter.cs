@@ -12,9 +12,10 @@ namespace Onboarding.Api.Prompts
         private const string AVERAGE = "<AVERAGE>";
         private const string HOW = "<HOW>";
         private const string PLAN = "<PLAN>";
+        private const string NATWEST = "<NATWEST>";
         private const string JoinerWithSpace = ", ";
 
-        public string GetRefinedPrompt(string category, string[] options, string plans)
+        public string GetRefinedPrompt(string category, string[] options, string plans, bool isNatWest)
         {
             var promptText = GetPromptText();
 
@@ -27,11 +28,13 @@ namespace Onboarding.Api.Prompts
                 .Replace(CATEGORY, category)
                 .Replace(LOCATIONS, Mocks.GetLocationsText())
                 .Replace(AVERAGE, Mocks.GetAverageTransactionValue().ToString("c"))
-                .Replace(HOW, string.Join(JoinerWithSpace, options));
+                .Replace(HOW, string.Join(JoinerWithSpace, options))
+                .Replace(NATWEST, isNatWest ? "I am a NatWest customer" : "I am not a NatWest customer");
 
             if (!string.IsNullOrWhiteSpace(plans)) {
                 promptText = promptText.Replace(PLAN, plans);
             }
+
 
             return promptText;
         }

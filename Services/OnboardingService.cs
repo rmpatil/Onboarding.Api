@@ -29,7 +29,8 @@ namespace Onboarding.Api.Services
             var prompt = pr.GetRefinedPrompt(
                 request.Category,  
                 request.HowToTakePayments, 
-                request.PlansForNext6Months);
+                request.PlansForNext6Months,
+                request.IsNatWest);
 
             _messages.Add(new ChatMessage()
             {
