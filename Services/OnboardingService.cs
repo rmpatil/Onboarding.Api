@@ -1,4 +1,5 @@
 ﻿using Onboarding.Api.MockService;
+using Onboarding.Api.Prompts;
 using Onboarding.Api.Requests;
 using Onboarding.Api.Response;
 
@@ -21,16 +22,19 @@ namespace Onboarding.Api.Services
         {
             // Construct the Prompt using request fields
 
-            string companySize = _businessRevenueService.GetCompanySize(request.AnnualTurnOver);
-            int mccCode= _mccMockService.GetMockMccCode();
+            // string companySize = _businessRevenueService.GetCompanySize(request.AnnualTurnOver);
+            // int mccCode= _mccMockService.GetMockMccCode();
 
-
-
+            Prompter pr = new Prompter();
+            var prompt = pr.GetRefinedPrompt(
+                request.Category,  
+                request.HowToTakePayments, 
+                request.PlansForNext6Months);
 
             _messages.Add(new ChatMessage()
             {
                 Role= "user",
-                Content = request.FieldOne.ToString()
+                Content = prompt
             });
 
             try

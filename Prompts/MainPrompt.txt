@@ -1,0 +1,47 @@
+﻿Given following products
+ 
+Tap to Pay: This product allows you to take contactless payments directly through your smartphone without any additional hardware. It is ideal for small and medium-sized merchants with revenue over £10,000 who conduct face-to-face transactions. It supports both iPhone and Android devices and ensures secure transactions through built-in device protections and Tyl's security standards​.
+
+Clover Flex: An all-in-one POS system that helps manage business operations on the go. It includes features for employee and inventory management, as well as printing and splitting bills. Connectivity options include 4G and Wi-Fi​​. Ideal for small and medium businesses.
+
+PAX A50: A pocket-sized, portable card machine ideal for businesses needing mobility. It supports Wi-Fi, 4G, and Bluetooth connectivity​​. Ideal for small and medium businesses.
+
+Ingenico Desk 3500: A countertop card machine that remains stationary and is connected via Ethernet. It's suitable for businesses with a fixed payment point​. Ideal for small and medium businesses.
+
+Ingenico Move 3500: A portable card machine designed for taking payments on the move, connected through Wi-Fi and 4G​​. Ideal for small and medium businesses.
+
+Payment Links: Allows businesses to send secure online payment links to customers, which can be convenient for receiving payments without a physical POS terminal. This method is beneficial for businesses that send invoices or operate remotely​.
+
+Virtual Terminal: Enables taking payments over the phone or through online portals, ensuring flexibility and security for remote transactions​​.
+
+Payment Gateway: Supports integration with websites for seamless online payment processing, ensuring PCI compliance and fraud protection​​.
+
+And following historical transaction list
+{
+  "transactions": [
+    {"amount": 24.75, "mcc": "8263", "category": "bakery", "transaction_id": "txn001", "date": "2024-01-01"},
+    {"amount": 35.00, "mcc": "8263", "category": "bakery", "transaction_id": "txn002", "date": "2024-01-02"},
+    {"amount": 42.50, "mcc": "8263", "category": "bakery", "transaction_id": "txn003", "date": "2024-01-03"},
+    {"amount": 18.90, "mcc": "9274", "category": "dentist", "transaction_id": "txn004", "date": "2024-01-04"},
+    {"amount": 55.20, "mcc": "9274", "category": "dentist", "transaction_id": "txn005", "date": "2024-01-05"},
+    {"amount": 28.00, "mcc": "9274", "category": "dentist", "transaction_id": "txn006", "date": "2024-01-06"},
+    {"amount": 37.15, "mcc": "7384", "category": "plumber", "transaction_id": "txn007", "date": "2024-01-07"},
+    {"amount": 44.80, "mcc": "7384", "category": "plumber", "transaction_id": "txn008", "date": "2024-01-08"},
+    {"amount": 50.00, "mcc": "7384", "category": "plumber", "transaction_id": "txn009", "date": "2024-01-09"},
+    {"amount": 21.35, "mcc": "7384", "category": "plumber", "transaction_id": "txn010", "date": "2024-01-10"}
+  ]
+}
+
+Promotions offered
+
+Merchants based in Locations Watford and Manchester receive 10% discount for 3 months.
+
+Merchants based in Locations London and Luton receive 15% discount 1st month.
+
+Merchants with average transaction amount greater than 50 get 1% discount for 12 months.
+
+
+I am a <SIZE> <CATEGORY> owner operating in <LOCATIONS> with annual turnover of <TURN_OVER> and average transaction amount is <AVERAGE> taking payments <HOW> payments.
+<PLAN>
+
+Recommend me suitable product list, applicable promotions and historical average transaction amount in JSON format with suitable_products, discounts, locations, historical_transaction_value
